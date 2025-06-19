@@ -928,12 +928,6 @@ const filteredProducts = products.filter((product) => {
   return byManufacturer && byType;
 });
 
-  const matchesType =
-    !filterType || normalizedType === filterType;
-
-  return matchesManufacturer && matchesType;
-});
-
   return (
     <div className="container">
       <h1>Objednávka Bezlepkových Potravín</h1>
