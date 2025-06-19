@@ -922,10 +922,15 @@ Meno a Priezvisko:
   };
 
 const filteredProducts = products.filter((product) => {
-  const byManufacturer =
-    manufacturerFilter === "" || product.manufacturer === manufacturerFilter;
-  const byType = typeFilter === "" || product.type === typeFilter;
-  return byManufacturer && byType;
+  const matchesManufacturer =
+    manufacturerFilter.trim() === "" ||
+    product.manufacturer.toLowerCase().trim() === manufacturerFilter.toLowerCase().trim();
+
+  const matchesType =
+    typeFilter.trim() === "" ||
+    product.type.toLowerCase().trim() === typeFilter.toLowerCase().trim();
+
+  return matchesManufacturer && matchesType;
 });
 
   return (
