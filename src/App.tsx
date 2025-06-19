@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
 import "./styles.css";
 
-const products = [
-  {
+type Product = {
+  code: string;
+  name: string;
+  weight: number;
+  manufacturer: string;
+  type: string;
+  image: string;
+};
+
+const products: Product[] = [
+ {
     code: "D1403",
     name: "Mix For Flour",
     weight: 1,
@@ -364,62 +373,94 @@ const products = [
   },
 ];
 
+type PatientData = {
+  rc: string;
+  tc: string;
+  name: string;
+  insurer: string;
+};
+
+type SelectedItem = {
+  weight: number;
+  quantity: number;
+};
+
 export default function GlutenFreeOrder() {
-  const [selectedItems, setSelectedItems] = useState({});
+  const [selectedItems, setSelectedItems] = useState<Record<string, SelectedItem>>({});
   const [emailTemplate, setEmailTemplate] = useState(
-    "Dobrý deň,\n\nProsím vás predpísať recept na bezlepkové potraviny:\n\n{{orderList}}\n\nKontakt: \nPoistovňa: \nRodné Číslo: \nMeno a Priezvisko: \n\nĎakujem."
+    `Dobrý deň,
+
+Prosím vás predpísať recept na bezlepkové potraviny:
+
+{{orderList}}
+
+Kontakt: 
+Poistovňa: 
+Rodné Číslo: 
+Meno a Priezvisko: 
+
+Ďakujem.`
   );
   const [manufacturerFilter, setManufacturerFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const [rc, setRc] = useState("");
-  const [tc, setTc] = useState("");
-  const [name, setName] = useState("");
-  const [insurer, setInsurer] = useState("");
-  const [savedPatientData, setSavedPatientData] = useState(null);
+  const [patientData, setPatientData] = useState<PatientData>({
+    rc: "",
+    tc: "",
+    name: "",
+    insurer: "",
+  });
 
+  // Načítanie údajov z localStorage pri mountnutí komponentu
   useEffect(() => {
-    setRc(localStorage.getItem("rc") || "");
-    setTc(localStorage.getItem("tc") || "");
-    setName(localStorage.getItem("name") || "");
-    setInsurer(localStorage.getItem("insurer") || "");
+    const savedRc = localStorage.getItem("rc") || "";
+    const savedTc = localStorage.getItem("tc") || "";
+    const savedName = localStorage.getItem("name") || "";
+    const savedInsurer = localStorage.getItem("insurer") || "";
+    setPatientData({
+      rc: savedRc,
+      tc: savedTc,
+      name: savedName,
+      insurer: savedInsurer,
+    });
   }, []);
 
-  const handlePatientDataChange = (field, value) => {
-    if (field === "rc") setRc(value);
-    if (field === "tc") setTc(value);
-    if (field === "name") setName(value);
-    if (field === "insurer") setInsurer(value);
+  const handlePatientDataChange = (field: keyof PatientData, value: string) => {
+    setPatientData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
   };
 
   const handleSavePatientData = () => {
-    const data = { rc, tc, name, insurer };
-    localStorage.setItem("rc", rc);
-    localStorage.setItem("tc", tc);
-    localStorage.setItem("name", name);
-    localStorage.setItem("insurer", insurer);
-    setSavedPatientData(data);
+    localStorage.setItem("rc", patientData.rc);
+    localStorage.setItem("tc", patientData.tc);
+    localStorage.setItem("name", patientData.name);
+    localStorage.setItem("insurer", patientData.insurer);
 
     setEmailTemplate((prev) =>
       prev
-        .replace(/Rodné Číslo:.*\n/, `Rodné Číslo: ${rc}\n`)
-        .replace(/Kontakt:.*\n/, `Kontakt: ${tc}\n`)
-        .replace(/Meno a Priezvisko:.*\n/, `Meno a Priezvisko: ${name}\n`)
-        .replace(/Poistovňa:.*\n/, `Poistovňa: ${insurer}\n`)
+        .replace(/Rodné Číslo:.*\n/, `Rodné Číslo: ${patientData.rc}\n`)
+        .replace(/Kontakt:.*\n/, `Kontakt: ${patientData.tc}\n`)
+        .replace(/Meno a Priezvisko:.*\n/, `Meno a Priezvisko: ${patientData.name}\n`)
+        .replace(/Poistovňa:.*\n/, `Poistovňa: ${patientData.insurer}\n`)
     );
   };
 
   const handleResetPatientData = () => {
-    setRc("");
-    setTc("");
-    setName("");
-    setInsurer("");
+    setPatientData({ rc: "", tc: "", name: "", insurer: "" });
     localStorage.removeItem("rc");
     localStorage.removeItem("tc");
     localStorage.removeItem("name");
     localStorage.removeItem("insurer");
-    setSavedPatientData(null);
+    setEmailTemplate((prev) =>
+      prev
+        .replace(/Rodné Číslo:.*\n/, "Rodné Číslo: \n")
+        .replace(/Kontakt:.*\n/, "Kontakt: \n")
+        .replace(/Meno a Priezvisko:.*\n/, "Meno a Priezvisko: \n")
+        .replace(/Poistovňa:.*\n/, "Poistovňa: \n")
+    );
   };
 
   const totalWeight = Object.values(selectedItems).reduce(
@@ -428,7 +469,7 @@ export default function GlutenFreeOrder() {
   );
   const weightLimit = 12;
 
-  const handleSelect = (code, weight, quantity) => {
+  const handleSelect = (code: string, weight: number, quantity: number) => {
     setSelectedItems((prev) => {
       const newItems = { ...prev };
       if (quantity > 0) {
@@ -444,19 +485,21 @@ export default function GlutenFreeOrder() {
     const orderList = Object.entries(selectedItems)
       .map(([code, item]) => {
         const product = products.find((p) => p.code === code);
+        if (!product) return "";
         const totalWeight = product.weight * item.quantity;
         const unit = totalWeight < 1 ? "gram" : "kg";
         const weightInUnit = totalWeight < 1 ? totalWeight * 1000 : totalWeight;
         return `${product.code} - ${item.quantity}x ${product.name} (${weightInUnit} ${unit})`;
       })
+      .filter(Boolean)
       .join("\n");
 
     const emailBody = emailTemplate
       .replace("{{orderList}}", orderList)
-      .replace(/Rodné Číslo:.*\n/, `Rodné Číslo: ${rc}\n`)
-      .replace(/Kontakt:.*\n/, `Kontakt: ${tc}\n`)
-      .replace(/Meno a Priezvisko:.*\n/, `Meno a Priezvisko: ${name}\n`)
-      .replace(/Poistovňa:.*\n/, `Poistovňa: ${insurer}\n`);
+      .replace(/Rodné Číslo:.*\n/, `Rodné Číslo: ${patientData.rc}\n`)
+      .replace(/Kontakt:.*\n/, `Kontakt: ${patientData.tc}\n`)
+      .replace(/Meno a Priezvisko:.*\n/, `Meno a Priezvisko: ${patientData.name}\n`)
+      .replace(/Poistovňa:.*\n/, `Poistovňa: ${patientData.insurer}\n`);
 
     const subject = "Recept na bezlepkové potraviny";
     const mailtoLink = `mailto:?subject=${encodeURIComponent(
@@ -487,40 +530,86 @@ export default function GlutenFreeOrder() {
 
       <div className="section">
         <h3>Údaje pacienta</h3>
-        <div className="patient-grid">
+        <div
+          style={{
+            display: "grid",
+            gap: "10px",
+            gridTemplateColumns: "1fr 1fr",
+            maxWidth: 600,
+            margin: "0 auto 20px",
+          }}
+        >
           <input
             type="text"
             placeholder="Rodné číslo"
-            value={rc}
+            value={patientData.rc}
             onChange={(e) => handlePatientDataChange("rc", e.target.value)}
-            className="patient-input"
+            style={{
+              padding: 10,
+              borderRadius: 8,
+              border: "1px solid #ccc",
+              fontSize: 14,
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
           <input
             type="text"
             placeholder="Telefónne číslo"
-            value={tc}
+            value={patientData.tc}
             onChange={(e) => handlePatientDataChange("tc", e.target.value)}
-            className="patient-input"
+            style={{
+              padding: 10,
+              borderRadius: 8,
+              border: "1px solid #ccc",
+              fontSize: 14,
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
           <input
             type="text"
             placeholder="Meno a priezvisko"
-            value={name}
+            value={patientData.name}
             onChange={(e) => handlePatientDataChange("name", e.target.value)}
-            className="patient-input span-two"
+            style={{
+              padding: 10,
+              borderRadius: 8,
+              border: "1px solid #ccc",
+              fontSize: 14,
+              gridColumn: "span 2",
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
           <input
             type="text"
             placeholder="Poistovňa"
-            value={insurer}
+            value={patientData.insurer}
             onChange={(e) => handlePatientDataChange("insurer", e.target.value)}
-            className="patient-input span-two"
+            style={{
+              padding: 10,
+              borderRadius: 8,
+              border: "1px solid #ccc",
+              fontSize: 14,
+              gridColumn: "span 2",
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           />
-          <div className="patient-buttons">
-            <button className="send-button" onClick={handleSavePatientData}>
+          <div style={{ gridColumn: "span 2", display: "flex", gap: 10 }}>
+            <button
+              className="send-button"
+              style={{ flex: 1 }}
+              onClick={handleSavePatientData}
+            >
               Uložiť údaje
             </button>
-            <button className="send-button" onClick={handleResetPatientData}>
+            <button
+              className="send-button"
+              style={{ flex: 1 }}
+              onClick={handleResetPatientData}
+            >
               Reset
             </button>
           </div>
@@ -535,7 +624,7 @@ export default function GlutenFreeOrder() {
           onChange={(e) => setManufacturerFilter(e.target.value)}
         >
           <option value="">Všetci výrobcovia</option>
-          {[...new Set(products.map((p) => p.manufacturer))].map((m) => (
+          {Array.from(new Set(products.map((p) => p.manufacturer))).map((m) => (
             <option key={m} value={m}>
               {m}
             </option>
@@ -548,7 +637,7 @@ export default function GlutenFreeOrder() {
           onChange={(e) => setTypeFilter(e.target.value)}
         >
           <option value="">Všetky typy</option>
-          {[...new Set(products.map((p) => p.type))].map((t) => (
+          {Array.from(new Set(products.map((p) => p.type))).map((t) => (
             <option key={t} value={t}>
               {t}
             </option>
@@ -582,7 +671,7 @@ export default function GlutenFreeOrder() {
           {selectedItems[product.code] && (
             <input
               type="number"
-              min="1"
+              min={1}
               className="quantity-input"
               value={selectedItems[product.code]?.quantity || ""}
               onChange={(e) => {
@@ -592,7 +681,7 @@ export default function GlutenFreeOrder() {
                     ...prev,
                     [product.code]: {
                       weight: product.weight,
-                      quantity: "",
+                      quantity: 0,
                     },
                   }));
                 } else {
@@ -617,6 +706,7 @@ export default function GlutenFreeOrder() {
         <ul>
           {Object.entries(selectedItems).map(([code, item]) => {
             const product = products.find((p) => p.code === code);
+            if (!product) return null;
             return (
               <li key={code}>
                 {product.name} - {item.quantity}x ({product.weight}kg)
@@ -629,7 +719,7 @@ export default function GlutenFreeOrder() {
       <textarea
         className="email-template"
         style={{ display: "block", margin: "20px auto", width: "80%" }}
-        rows="6"
+        rows={6}
         value={emailTemplate}
         onChange={(e) => setEmailTemplate(e.target.value)}
       />
@@ -639,7 +729,7 @@ export default function GlutenFreeOrder() {
         onClick={generateEmail}
         disabled={totalWeight > weightLimit}
       >
-        Posli recept doktorovi
+        Pošli recept doktorovi
       </button>
 
       {selectedImage && (
