@@ -372,15 +372,6 @@ const products: Product[] = [
       "https://content2-adc-sk.adcdata.sk/images/832235/a87znq0_400x400.jpg",
   },
   {
-    code: "D0181",
-    name: "APROCEL - NÍZKOBIELK. CESTOVINY - niťovky",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/499179/rsk7320_400x400.jpg",
-  }, 
-  {
     code: "D0869",
     name: "MEVALIA - DITALI",
     weight: 0.5,
@@ -406,96 +397,6 @@ const products: Product[] = [
     type: "Cestoviny",
     image:
       "https://www.pkushop.cz/fotky53911/fotos/_vyr_308_20141103_pack_penne.png",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ČÍSLICE",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/941159/5u6lcy0_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, FLIAČKY - MALÉ",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/703726/6sayo90_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, FLIAČKY - VEĽKÉ",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/446858/o843900_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, KOLIENKA - MALÉ",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/763669/l1z7fu0_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, KOLIENKA - VEĽKÉ",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/238833/f40la30_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, NIŤOVKY",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/100001/elwhu80_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, REZANCE",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/613441/ae28wg0_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ŠPAGETY",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/443574/v46fuf0_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ŠPIRÁLY",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/276430/cjaypj0_400x400.jpg",
-  },
-  {
-    code: "D0180",
-    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, TARHOŇA",
-    weight: 0.25,
-    manufacturer: "Novalim",
-    type: "Cestoviny",
-    image:
-      "https://content2-adc-sk.adcdata.sk/images/346525/p6xdql0_400x400.jpg",
   },
   {
     code: "D0338",
