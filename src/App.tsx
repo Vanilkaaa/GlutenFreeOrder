@@ -673,7 +673,7 @@ const products: Product[] = [
     name: "Schär Pan Gratí (Paniermehl) strúhanka",
     weight: 0.3,
     manufacturer: "Schar",
-    type: "Pekárenské výrobky",
+    type: "Strúhanka",
     image:
       "https://content2-adc-sk.adcdata.sk/images/698990/z8g0o60_400x400.jpg",
   },
@@ -709,9 +709,73 @@ const products: Product[] = [
     name: "STRÚHANKA BEZLEPKOVÁ PEČIVOVÁ",
     weight: 0.35,
     manufacturer: "Novalim",
-    type: "Pekárenské výrobky",
+    type: "Strúhanka",
     image:
       "https://content2-adc-sk.adcdata.sk/images/625349/gg9qqo0_400x400.jpg",
+  },
+                                      {
+    code: "D0340",
+    name: "MüSLI BEZLEPKOVE GRANULOVANÉ",
+    weight: 0.2,
+    manufacturer: "Novalim",
+    type: "Müsli",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/735625/hajnm80_400x400.jpg",
+  },
+                                        {
+    code: "D0942",
+    name: "Schär Fruit Müsli",
+    weight: 0.375,
+    manufacturer: "Schar",
+    type: "Müsli",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/691941/evvt9i0_400x400.jpg",
+  },
+                                          {
+    code: "D0272",
+    name: "KNEDĽA BEZLEPKOVÁ V PRÁŠKU",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Zmesy v prášku",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/119973/8mtwaw0_400x400.jpg",
+  },
+                                            {
+    code: "D0335",
+    name: "MUFFINY BEZLEPKOVÉ V PRÁŠKU",
+    weight: 0.3,
+    manufacturer: "Novalim",
+    type: "Zmesy v prášku",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/664404/gl7dvn0_400x400.jpg",
+  },
+                                            {
+    code: "D1104",
+    name: "NOVALIM Halušky bezgluténové v prášku",
+    weight: 0.3,
+    manufacturer: "Novalim",
+    type: "Zmesy v prášku",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/457357/2mc4gn0_400x400.jpg",
+  },
+                                      {
+    code: "D0253",
+    name: "LIMKY DIÉTNE KEKSY KAKAOVÉ",
+    weight: 0.15,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/149379/ikhpn10_400x400.jpg",
+  },
+
+                                      {
+    code: "D0252",
+    name: "LIMKY DIÉTNE KEKSY VANILKOVÉ",
+    weight: 0.15,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/307184/w88zsy0_400x400.jpg",
   },
 ];
 
