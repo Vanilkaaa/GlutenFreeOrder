@@ -54,7 +54,7 @@ const products: Product[] = [
     manufacturer: "Liana",
     type: "Múka",
     image:
-      "https://content2-adc-sk.adcdata.sk/images/588630/8fbtjx0_400x400.jpg",
+      "https://content2-adc-sk.adcdata.sk/images/588630/86pzdz0_400x400.jpg",
   },
   {
     code: "D1029",
@@ -63,7 +63,7 @@ const products: Product[] = [
     manufacturer: "Liana",
     type: "Múka",
     image:
-      "https://content2-adc-sk.adcdata.sk/images/559314/zildz40_400x400.jpg",
+      "https://content2-adc-sk.adcdata.sk/images/559314/jbcw4t0_400x400.jpg",
   },
   {
     code: "D0175",
@@ -81,7 +81,7 @@ const products: Product[] = [
     manufacturer: "Liana",
     type: "Múka",
     image:
-      "https://content2-adc-sk.adcdata.sk/images/374458/kbhflj0_400x400.jpg",
+      "https://content2-adc-sk.adcdata.sk/images/374458/84hwr90_400x400.jpg",
   },
   {
     code: "D1031",
@@ -108,7 +108,7 @@ const products: Product[] = [
     manufacturer: "Liana",
     type: "Múka",
     image:
-      "https://content2-adc-sk.adcdata.sk/images/523139/23rkaq0_400x400.jpg",
+      "https://content2-adc-sk.adcdata.sk/images/523139/yu3rxt0_400x400.jpg",
   },
   {
     code: "D1226",
