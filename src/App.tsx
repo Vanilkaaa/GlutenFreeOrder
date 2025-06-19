@@ -70,7 +70,7 @@ const products: Product[] = [
     name: "KRUPICA BEZLEPKOVÁ",
     weight: 0.5,
     manufacturer: "Novalim",
-    type: "Iné",
+    type: "Krupica",
     image:
       "https://content2-adc-sk.adcdata.sk/images/380162/63r9ea0_400x400.jpg",
   },
@@ -214,7 +214,7 @@ const products: Product[] = [
     name: "MLYN TRENČAN Odvážny hrášok - HRACHOVÁ KRUPICA",
     weight: 0.5,
     manufacturer: "Mlyn Trenčan",
-    type: "Iné",
+    type: "Krupica",
     image:
       "https://content2-adc-sk.adcdata.sk/images/279241/bg3ckk0_400x400.jpg",
   },
@@ -232,7 +232,7 @@ const products: Product[] = [
     name: "MLYN TRENČAN Pohánková krupica",
     weight: 0.5,
     manufacturer: "Mlyn Trenčan",
-    type: "Iné",
+    type: "Krupica",
     image:
       "https://content2-adc-sk.adcdata.sk/images/601030/aebrmg0_400x400.jpg",
   },
