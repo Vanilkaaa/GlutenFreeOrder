@@ -380,6 +380,339 @@ const products: Product[] = [
     image:
       "https://content2-adc-sk.adcdata.sk/images/499179/rsk7320_400x400.jpg",
   }, 
+              {
+    code: "D0869",
+    name: "MEVALIA - DITALI",
+    weight: 0.5,
+    manufacturer: "Nestlé",
+    type: "Cestoviny",
+    image:
+      "https://bezlepka.sk/wp-content/uploads/2019/03/mevalia-ditali.jpg",
+  },
+              {
+    code: "D0871",
+    name: " MEVALIA - FUSILLI",
+    weight: 0.5,
+    manufacturer: "Nestlé",
+    type: "Cestoviny",
+    image:
+      "https://www.pkushop.cz/fotky53911/fotos/_vyr_300_20141103_pack_fusilli.png",
+  },
+              {
+    code: "D0870",
+    name: "MEVALIA - PENNE",
+    weight: 0.5,
+    manufacturer: "Nestlé",
+    type: "Cestoviny",
+    image:
+      "https://www.pkushop.cz/fotky53911/fotos/_vyr_308_20141103_pack_penne.png",
+  },
+              {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ČÍSLICE",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/941159/5u6lcy0_400x400.jpg",
+  },
+              {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, FLIAČKY - MALÉ",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/703726/6sayo90_400x400.jpg",
+  },
+              {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, FLIAČKY - VEĽKÉ",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/446858/o843900_400x400.jpg",
+  },
+              {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, KOLIENKA - MALÉ",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/763669/l1z7fu0_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, KOLIENKA - VEĽKÉ",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/238833/f40la30_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, NIŤOVKY",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/100001/elwhu80_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, REZANCE",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/613441/ae28wg0_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ŠPAGETY",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/443574/v46fuf0_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, ŠPIRÁLY",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/276430/cjaypj0_400x400.jpg",
+  },
+                {
+    code: "D0180",
+    name: "PROCEL - BEZLEPKOVÉ CESTOVINY, TARHOŇA",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/346525/p6xdql0_400x400.jpg",
+  },
+                {
+    code: "D0338",
+    name: "BEZLEPKOVÉ TYČINKY S POHÁNKOU, EXTRUDOVANÝ VÝROBOK",
+    weight: 0.085,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/827405/tan7td0_400x400.jpg",
+  },
+                  {
+    code: "D0185",
+    name: "CHLIEB BEZLEPKOVÝ SVETLÝ (TRVANLIVÝ)",
+    weight: 0.36,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://www.vitalmix.cz/buxus/images/cache/fotogaleria-lightbox/fotogaleria/katalog_produktov/chlieb_bezlepkovy_tmavy_trvanlivy_1x360_g/jfmvqr0.jpg",
+  },
+                  {
+    code: "D0251",
+    name: "CHLIEB BEZLEPKOVÝ TMAVÝ (TRVANLIVÝ)",
+    weight: 0.36,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/286996/jfmvqr0_400x400.jpg",
+  },
+                    {
+    code: "D0339",
+    name: "HVIEZDIČKY BEZLEPKOVÉ, EXTRUDOVANÝ VÝROBOK",
+    weight: 0.1,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/754061/ooes6r0_400x400.jpg",
+  },
+                      {
+    code: "D1280",
+    name: "Liana Rolls mix",
+    weight: 0.5,
+    manufacturer: "Liana",
+    type: "Múka",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/257269/aiawqp0_400x400.jpg",
+  },
+                      {
+    code: "D0874",
+    name: "LINSI - bezgluténový chlieb s ľanom",
+    weight: 0.3,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/615584/zh8d620_400x400.jpg",
+  },
+                        {
+    code: "D0866",
+    name: "MEVALIA - FROLINI",
+    weight: 0.2,
+    manufacturer: "Nestlé",
+    type: "Pekárenské výrobky",
+    image:
+      "https://www.pkushop.cz/fotky53911/fotos/_vyr_298_20141001_pack_frollini_biscotti.png",
+  },
+                          {
+    code: "D0182",
+    name: "NÍZKOBIELKOVINOVÉ OBLÁTKY",
+    weight: 0.1,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/600896/s89osu0_400x400.jpg",
+  },
+                            {
+    code: "D0877",
+    name: "NOVALIM Buchty - bezgluténové parené s lekvárom",
+    weight: 0.32,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/507919/adjetr0_400x400.jpg",
+  },
+                              {
+    code: "D0876",
+    name: "NOVALIM Knedľa - bezgluténová parená",
+    weight: 0.32,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/910284/2f9hba0_400x400.jpg",
+  },
+                                {
+    code: "D0979",
+    name: "NutriFree Panfette",
+    weight: 0.34,
+    manufacturer: "NutriFree",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/820387/t07lcl0_400x400.jpg",
+  },
+                                {
+    code: "D0978",
+    name: "NutriFree Panfette integrale",
+    weight: 0.34,
+    manufacturer: "NutriFree",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/516017/di3njl0_400x400.jpg",
+  },
+                                {
+    code: "D0293",
+    name: "Schär BON MATIN žemle",
+    weight: 0.2,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/571450/nvgm890_400x400.jpg",
+  },
+                                {
+    code: "D0661",
+    name: "Schär CIABATTA RUSTICA žemle",
+    weight: 0.2,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/184988/jvjguk0_400x400.jpg",
+  },
+                                {
+    code: "D0660",
+    name: "Schär CIABATTA žemle",
+    weight: 0.2,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/818000/fce0j50_400x400.jpg",
+  },
+                                  {
+    code: "D0941",
+    name: "Schär MAESTRO CEREALE chlieb",
+    weight: 0.3,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/799161/uu10160_400x400.jpg",
+  },
+                                  {
+    code: "D0940",
+    name: "Schär MAESTRO CLASSIC chlieb",
+    weight: 0.3,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/505318/rzzd4f0_400x400.jpg",
+  },
+                                  {
+    code: "D0939",
+    name: "Schär MAESTRO VITAL chlieb",
+    weight: 0.35,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/154941/h4f81s0_400x400.jpg",
+  },
+                                    {
+    code: "D0479",
+    name: "Schär PAIN Campagnard chlieb",
+    weight: 0.24,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/189010/cmbd4b0_400x400.jpg",
+  },
+                                    {
+    code: "D0658",
+    name: "Schär Pan Gratí (Paniermehl) strúhanka",
+    weight: 0.3,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/698990/z8g0o60_400x400.jpg",
+  },
+                                    {
+    code: "D0296",
+    name: "Schär QUADRITOS oblátky",
+    weight: 0.04,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/531283/w0lits0_400x400.jpg",
+  },
+                                    {
+    code: "D0297",
+    name: "Schär SALINIS praclíky",
+    weight: 0.06,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/228189/7sok750_400x400.jpg",
+  },
+                                    {
+    code: "D0875",
+    name: "Schär ŽEMLE HAMBURGER",
+    weight: 0.3,
+    manufacturer: "Schar",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/288260/5qdf730_400x400.jpg",
+  },
+                                    {
+    code: "D0254",
+    name: "STRÚHANKA BEZLEPKOVÁ PEČIVOVÁ",
+    weight: 0.35,
+    manufacturer: "Novalim",
+    type: "Pekárenské výrobky",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/625349/gg9qqo0_400x400.jpg",
+  },
 ];
 
 type PatientData = {
