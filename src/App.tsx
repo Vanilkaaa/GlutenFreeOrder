@@ -371,6 +371,15 @@ const products: Product[] = [
     image:
       "https://content2-adc-sk.adcdata.sk/images/832235/a87znq0_400x400.jpg",
   },
+            {
+    code: "D0181",
+    name: "APROCEL - NÍZKOBIELK. CESTOVINY - niťovky",
+    weight: 0.25,
+    manufacturer: "Novalim",
+    type: "Cestoviny",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/499179/rsk7320_400x400.jpg",
+  }, 
 ];
 
 type PatientData = {
