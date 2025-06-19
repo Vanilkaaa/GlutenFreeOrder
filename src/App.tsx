@@ -921,13 +921,20 @@ Meno a Priezvisko:
     }
   };
 
-  const filteredProducts = products.filter((product) => {
-    const matchesManufacturer = manufacturerFilter
-      ? product.manufacturer === manufacturerFilter
-      : true;
-    const matchesType = typeFilter ? product.type === typeFilter : true;
-    return matchesManufacturer && matchesType;
-  });
+const filteredProducts = products.filter((product) => {
+  const matchesManufacturer = manufacturerFilter
+    ? product.manufacturer === manufacturerFilter
+    : true;
+  const matchesType = typeFilter ? product.type === typeFilter : true;
+
+  console.log(
+    product.name,
+    "manufacturer:", product.manufacturer, "==", manufacturerFilter, matchesManufacturer,
+    "type:", product.type, "==", typeFilter, matchesType
+  );
+
+  return matchesManufacturer && matchesType;
+});
 
   return (
     <div className="container">
