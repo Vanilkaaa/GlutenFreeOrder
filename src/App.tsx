@@ -20,6 +20,15 @@ const products: Product[] = [
     image:
       "https://content2-adc-sk.adcdata.sk/images/485488/006oeu0_400x400.jpg",
   },
+   {
+    code: "D1318",
+    name: "Schär PANCAKES & WAFFELN",
+    weight: 0.35,
+    manufacturer: "Schar",
+    type: "Múka",
+    image:
+      "https://content2-adc-sk.adcdata.sk/images/322022/fnnyla0_400x400.jpg?ts2=400x400-fill-fff:jpg",
+  },
   {
     code: "D0195",
     name: "APROMIX- PLUS NÍZKOBIELKOVINOVÁ MÚKA",
